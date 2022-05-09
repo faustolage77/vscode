@@ -6,6 +6,8 @@ alunos.unshift('Tiago') // adiciona ao inicio
 
 const removido = alunos.pop();
 
+
 console.log(removido, '- REMOVIDO');
+
 console.log(alunos);
 
