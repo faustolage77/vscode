@@ -14,18 +14,23 @@ const notasALunos = [
     { nome: 'Jonatas', notas: [6, 8.5, 8, 6.5, 7, 10] },
     { nome: 'Henrique', notas: [4, 8.2, 5.5, 8.5, 5.4, 6] }
 ]
+    
+    let aluno = notasALunos.notas;
+    let aluno1 = notasALunos[0].notas; 
+    let soma = 0;
+    for(let i = 0; i < aluno1.length; i++){
+        soma += aluno1[i];
+                
+    }
+let media = soma / aluno1.length; 
+
+ 
+notasALunos[0].notas.push(`A media e ${media}`);
+console.log(notasALunos[0]);
 
 
-
-
-
-
-
-
-
-
-// console.log(notasALunos)
-
+    
+    
 
 
 
