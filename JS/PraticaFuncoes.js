@@ -10,17 +10,18 @@ Expected Output : 34223
 
 // console.log(inverter(144343));
 
-///////////
+// ///////////
 
-// uma funcao que coloca todas as letras de uma palavra em maiuscula;
+// // uma funcao que coloca todas as letras de uma palavra em maiuscula;
 
-function capitalize(palavra){
-let capital = palavra.toUpperCase(palavra)
-return capital;
+// function capitalize(palavra){
+// let capital = palavra.toUpperCase(palavra)
+// return capital;
 
-}
+// }
 
-console.log(capitalize('diagnostico'));
-console.log(capitalize('controle'));
-console.log(capitalize('pequenos sucessos '));
-console.log(capitalize('supermercados '));
+// console.log(capitalize('diagnostico'));
+// console.log(capitalize('controle'));
+// console.log(capitalize('pequenos sucessos '));
+// console.log(capitalize('supermercados '));
+
