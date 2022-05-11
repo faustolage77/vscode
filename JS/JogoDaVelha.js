@@ -10,7 +10,7 @@
 > extra:
 > reiniciar partida
 > selecionar simbolo no inicio da partida;
-> acumular pontuacao do venecedor   
+> acumular pontuacao do venecedor  // POSSIVEL SOLUCAO : CRIAR UMA LISTA COM TODAS AS SENTENCAS POSSIVEIS DE VITORIA  
 */
 
 // const boardData = ['X',0,'x',0,'x','x',0,0,0];
