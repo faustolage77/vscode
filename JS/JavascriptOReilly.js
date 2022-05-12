@@ -61,36 +61,96 @@
 // console.log(a===b);
 
 // criar uma copia de um array utilizando o laco 'for' 
-let a = ['a', 'b', 'c'];
-let b = [];
-for(var i = 0; i < a.length; i ++){
-    b[i] = a[i]}
+// let a = ['a', 'b', 'c'];
+// let b = [];
+// for(var i = 0; i < a.length; i ++){
+//     b[i] = a[i]}
 
-function equalArrays(a,b){ 
-    if(a.length != b.length) return false;
+//     // codigo para comparar 2 arrays;
+// function equalArrays(a,b){ 
+//     if(a.length != b.length) return false;
 
-    for(let i = 0; i < a.length; i++)
-    if(a[i] !==b[i]) return false;
+//     for(let i = 0; i < a.length; i++)
+//     if(a[i] !==b[i]) return false;
 
-    return true;
+//     return true;
         
+//     }
+
+//     console.log(equalArrays(a,b));
+
+
+//  Conversoes de tipo 
+
+// console.log(10 + 'objects'); // converte 10 + 'objects' automaticamente para string;
+// console.log(typeof (10 + 'objects'));
+// console.log('7'*'4'); // converte automaticamente p number 
+
+// variaveis globais e locais (dentro do escopo da funcao)
+
+
+// let scope = 'global';
+
+// function checkScope(){
+//     let scope = 'local';
+//     return scope;
+// }
+
+// console.log(checkScope()); // a variavel declarada dentro do escopo da funcao tem preferencia sobre a declarada fora ;
+
+// let scope = 'global scope';
+// function checkScope2(){
+//     scope = 'local'; // redefinindo a variavel global sem utilizar let .. problema 
+//     myScope = 'local';
+//     return [scope, myScope];
+    
+// }
+
+// checkScope2();
+// console.log(scope, myScope);
+
+
+
+//  aninhamento de funcao - nested scope whthin a function
+
+/*let scope = 'global scope';
+function checkScope(){
+    let scope = 'local scope';
+
+    function nested(){
+        let scope = 'nested scope';
+        return scope;
+    }
+    return nested();
+    return checkScope()
+
+
     }
 
-    console.log(equalArrays(a,b));
+    console.log(checkScope());
+*/ 
+    // console.log(nested()); // nao eh lido pois esta dentro do escopo de uma funcao
 
 
+//  escopo e icamento 
 
 
+function test(o){
+    let i = 0;
 
+    if(typeof o == 'object'){
+        let j = 0;
 
+        for(let k = 0; k < 10; k++){
+            
+            console.log(k);
+        }
+        console.log(k);
+    }
+    console.log(j);
+}
 
-
-
-
-
-
-
-
+console.log(test());
 
 
 
