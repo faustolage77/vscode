@@ -179,18 +179,29 @@ function checkScope(){
 
 // expressoes de acesso a propriedade
 
-let objeto = {x:1, y:{z:3}}
+/* let objeto = {x:1, y:{z:3}}
 
 // indices   0       1    2   
 let array = [objeto, 4, [5,6]];
 
 console.log(objeto.x); // 1: propriedade 'x' da expressao 'objeto';
-console.log(objeto.y.z); // undefined = chamando a propriedade 'z' da expressao 'o.y';
-console.log(objeto['x']);
-console.log(array[1]); // indice 1 do array: 4;
-console.log(array[2]['1']); // buscando o indice 1 do array que esta localizado no indice 3 do meu array (aninhado);
-console.log(array[0].x); // buscando o indice 0 do meu array, que no caso eh o objeto acima, e tambem acessando sua propriedade 'x';
 
+console.log(objeto.y.z); // undefined = chamando a propriedade 'z' da expressao 'o.y';
+
+console.log(objeto['x']);
+
+console.log(array[1]); // indice 1 do array: 4;
+
+console.log(array[2]['1']); // buscando o indice 1 do array que esta localizado no indice 3 do meu array (aninhado);
+
+console.log(array[0].x); // buscando o indice 0 do meu array, que no caso eh o objeto acima, e tambem acessando sua propriedade 'x';
+*/
+
+// Expressoes de invocacao
+
+// f(0)
+// Math.max(x,y,z);
+// a.sort
 
 
 

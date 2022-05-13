@@ -56,8 +56,8 @@ function isEmpty(positions) {
         return false
     }
 
-function setPlayerMovement(positions, player) { // VERIFICAR ESTRE TRECHO <=========================
-    if(isEmpty(positions){
+function setPlayerMovement(positions, player) { 
+    if(isEmptypositions){
         boardData[positions] = currentPlayer;
     } else{
         console.log(`Posicao ${positions} Invalida`);
