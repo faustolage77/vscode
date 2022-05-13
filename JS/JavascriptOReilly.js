@@ -135,25 +135,61 @@ function checkScope(){
 //  escopo e icamento 
 
 
-function test(o){
-    let i = 0;
+// function test(o){
+//     let i = 0;
 
-    if(typeof o == 'object'){
-        let j = 0;
+//     if(typeof o == 'object'){
+//         let j = 0;
 
-        for(let k = 0; k < 10; k++){
-            
-            console.log(k);
-        }
-        console.log(k);
-    }
-    console.log(j);
-}
+//         for(let k = 0; k < 10; k++){
 
-console.log(test());
+//             console.log(k);
+//         }
+//         console.log(k);
+//     }
+//     console.log(j);
+// }
+
+// console.log(test());
+
+//
+
+// let scope = 'global';
+// function funcaoTeste(){
+//     console.log(scope);
+//     let scope = 'local';
+// }
+
+// console.log(funcaoTeste());
+
+// let p ={x: 2.3, y: -1.2}; 
+// let q ={};
+// q.x = 2.3; q.y = -1.2 // fazendo com que ambos tenham as mesmas propriedades;
+
+// console.log(p, q); 
 
 
+//expressoes definidoras de funcao 
 
+// let square = function(x){
+//     return x * x ;
+// }
+
+// console.log(square(10));
+
+// expressoes de acesso a propriedade
+
+let objeto = {x:1, y:{z:3}}
+
+// indices   0       1    2   
+let array = [objeto, 4, [5,6]];
+
+console.log(objeto.x); // 1: propriedade 'x' da expressao 'objeto';
+console.log(objeto.y.z); // undefined = chamando a propriedade 'z' da expressao 'o.y';
+console.log(objeto['x']);
+console.log(array[1]); // indice 1 do array: 4;
+console.log(array[2]['1']); // buscando o indice 1 do array que esta localizado no indice 3 do meu array (aninhado);
+console.log(array[0].x); // buscando o indice 0 do meu array, que no caso eh o objeto acima, e tambem acessando sua propriedade 'x';
 
 
 
