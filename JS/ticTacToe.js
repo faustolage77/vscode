@@ -50,6 +50,25 @@ function setPlayerMovement(position) {
   }
 }
 
+function setWinner(arr1,arr2,winnerArray){  // verificar
+    let winner;
+      
+    winnerArray.forEach((el) => { 
+        if(el.every( v => arr1.includes(v)) ){
+            this.winner = 'o';
+        }
+    })
+
+    winnerArray.forEach((el) => { 
+        if(el.every( v => arr2.includes(v)) ){
+            this.winner = 'x';
+        }
+    })
+    return winner
+    
+  }
+
+
 // showTutorial();
 setPlayerMovement(0);
 setPlayerMovement(1);
