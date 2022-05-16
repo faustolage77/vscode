@@ -203,5 +203,44 @@ console.log(array[0].x); // buscando o indice 0 do meu array, que no caso eh o o
 // Math.max(x,y,z);
 // a.sort
 
+// operadores
 
+// operador in // checa se determinada variavel eh uma propriedade de um determinado objeto 
+
+// let point = {x:1, y:1};
+
+// console.log(toString in point);
+// console.log('x' in point);
+// console.log('z' in point); 
+
+// if('x' in point == true){
+//     console.log(`sim, x  esta no objeto point`);
+// }
+// else{
+//     console.log('nao esta'); 
+// }
+// indice   0 1 2
+// let data = [7,8,9];
+// console.log('0' in data); // true , checando se meu array tem o indice 0;
+// console.log('3' in data);  // false, nao ha o indice 3
+
+// instanceOf
+
+// 
+
+// operadores logicos
+
+// && se e somente se TODOS sao verdadeiros
+
+// let o = {x:1};
+// let p = null;
+
+// console.log(o && o.x);
+
+// console.log(p && p.x); // p eh falso entao retorna null e sequer avalia p.x 
+
+// if (a == b) stop();
+// (a == b) && stop(); // a expressao faz a mesma coisa da de cima
+
+// || basta que UM seja verdadeiro
 
