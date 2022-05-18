@@ -1,11 +1,32 @@
-const emptyString = '  ';
+const readlineSync = require('readline-sync');
 
-const boardData = Array(9).fill(emptyString);
+const emptyString = '  ';
+let boardData = Array(9).fill(emptyString);
 const players = {
   1: 'x',
   2: 'o',
 };
+
 let currentPlayer = players[1];
+
+const winnerConditions = [
+  [0, 1, 2],
+  [0, 3, 6],
+  [0, 4, 8],
+  [1, 4, 7],
+  [2, 5, 8],
+  [2, 4, 6],
+  [3, 4, 5],
+  [6, 7, 8],
+];
+
+function hasWinner() {
+  return winnerConditions.some((winnerCondition) => {
+    return winnerCondition.every((index) => {
+      return boardData[index] === currentPlayer;
+    });
+  });
+}
 
 function drawBoard(positions) {
   console.log(`
@@ -19,12 +40,14 @@ function drawBoard(positions) {
 
 function showTutorial() {
   console.log(`
-  ### Escolha a posiçao que deseja jogar baseado no tabuleiro abaixo ###
+  ### Escolha a posiÃ§ao que deseja jogar baseado no tabuleiro abaixo ###
+
      0 | 1 | 2
     -----------
      3 | 4 | 5
     -----------
      6 | 7 | 8
+
   ######################################################################
   `);
 }
@@ -46,37 +69,41 @@ function setPlayerMovement(position) {
     boardData[position] = currentPlayer;
     changePlayer();
   } else {
-    console.log(`A posição ${position} já foi usada`);
+    console.log(`A posiÃ§Ã£o ${position} jÃ¡ foi usada`);
   }
 }
 
-function setWinner(arr1,arr2,winnerArray){  // verificar
-    let winner;
-      
-    winnerArray.forEach((el) => { 
-        if(el.every( v => arr1.includes(v)) ){
-            this.winner = 'o';
-        }
-    })
-
-    winnerArray.forEach((el) => { 
-        if(el.every( v => arr2.includes(v)) ){
-            this.winner = 'x';
-        }
-    })
-    return winner
-    
+function isEndGame() {
+  let totalEmptyString = 0;
+  for (const position of boardData) {
+    if (position === emptyString) totalEmptyString++;
   }
+  return totalEmptyString === 0;
+}
+
+function move() {
+  const choice = readlineSync.question('Escolha uma posiÃ§Ã£o para jogar: ');
+  setPlayerMovement(choice);
+}
+
+function clearBoard() {
+  boardData = Array(9).fill(emptyString);
+}
+
+function start() {
+  showTutorial();
+  while (true) {
+    move();
+    drawBoard(boardData);
+    if (hasWinner()) {
+      console.log(`O jogador ${currentPlayer} venceu!!!`);
+      clearBoard();
+    } else if (isEndGame()) {
+      console.log('Deu Velha');
+      clearBoard();
+    }
+  }
+}
 
 
-// showTutorial();
-setPlayerMovement(0);
-setPlayerMovement(1);
-setPlayerMovement(2);
-setPlayerMovement(3);
-setPlayerMovement(4);
-setPlayerMovement(8);
-setPlayerMovement(6);
-
-drawBoard(boardData);
-
+start();

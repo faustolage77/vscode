@@ -40,10 +40,66 @@ to Fahrenheit value based on the formula `(Celsius × 9/5) + 32 = Fahrenheit */
 
 // 4. Write a function to find the area of a given Rectangle
 
-function triangleArea(width, heigth){
-    const triangleArea = (width * heigth);
-    console.log(triangleArea);
-    return triangleArea;
+// function triangleArea(width, heigth){
+//     const triangleArea = (width * heigth);
+//     console.log(triangleArea);
+//     return triangleArea;
+// }
+
+// triangleArea(18,29);
+
+// ################
+
+// 5. Write a function to find the area and perimeter of a Circle
+
+// function circleAreaAndPerimeter(radius) {
+//     const circleArea = 3.14 * (radius**2);
+//     console.log(circleArea);
+//     return circleArea;
+// }
+
+// circleAreaAndPerimeter(12);
+
+// perimetro = 2 * PI * raio
+// area =      PI * raio**2 
+
+// function circleValues(rad){
+//     return `Perimeter: ${2*Math.PI*rad}, Area: ${Math.PI*rad*rad}` ;
+
+// }
+
+// console.log(circleValues(12));
+
+//  ################
+
+// 6. Write a function to reverse a number
+
+// function reverseNumber(n) {
+//     let string = 'string test';
+//     string.split('');
+//     return string;
+
+// }
+
+// reverseNumber('string test');
+
+// ################
+
+// 7. Count number of Vowels in String
+
+
+
+function countVowel(string){ // definindo a minha funcao e os parametros
+    let count = 0; // sempre comecar com o contador
+    string = string.toLowerCase(); // converter para minuscula para nao dar erro de leitura
+
+    for(let i = 0; i<string.length;i++){ // formando o loop
+        if(string.charAt(i) =='a' || string.charAt(i) =='e' || string.charAt(i) =='i' // definindo os parametros de verificacao
+        || string.charAt(i) =='o' || string.charAt(i) =='u'){
+            count++ // incrementar o contador
+        }
+    }
+    return count
 }
 
-triangleArea(18,29);
+console.log(countVowel('Teste'));
