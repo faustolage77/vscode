@@ -1,15 +1,15 @@
 const readlineSync = require('readline-sync');
 
-const emptyString = '  ';
-let boardData = Array(9).fill(emptyString);
-const players = {
+const emptyString = '  '; // criar uma string vazia para receber as jogadas
+let boardData = Array(9).fill(emptyString); // criando um array com 9 posicoes para irem preenchendo a string vazia 
+const players = {  // criando um objeto para determinar os jogadores 
   1: 'x',
   2: 'o',
 };
 
-let currentPlayer = players[1];
+let currentPlayer = players[1]; // alternando entre jogadores determinando que o jogador atual sera o jogador 1 (la embaixo ele alterna para o 2)
 
-const winnerConditions = [
+const winnerConditions = [ // determinando o array de winning streaks
   [0, 1, 2],
   [0, 3, 6],
   [0, 4, 8],
@@ -60,9 +60,12 @@ function changePlayer() {
   if (currentPlayer === players[1]) {
     currentPlayer = players[2];
   } else {
-    currentPlayer = players[1];
+    currentPlayer = players[1]; // alternando entre players. se o atual e o 1, ele passa a ser o 2, quando ele se torna o 2 logo em seguida ele volta a ser o 1 e 
+    //por ai vai
   }
 }
+
+// parei aqui
 
 function setPlayerMovement(position) {
   if (isEmpty(position)) {

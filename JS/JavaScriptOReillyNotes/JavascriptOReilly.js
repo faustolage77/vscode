@@ -244,3 +244,15 @@ console.log(array[0].x); // buscando o indice 0 do meu array, que no caso eh o o
 
 // || basta que UM seja verdadeiro
 
+// eval
+
+let geval = eval;
+let x = 'global', y = 'global';
+
+function f(){
+    let x = 'local';
+    eval("x+= 'changed';");
+    return x; 
+}
+
+console.log(f());
