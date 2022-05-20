@@ -2,15 +2,19 @@
   "dependencies": {
     "dotenv": "^16.0.1"
   },
-  "name": "js",
+  "name": "is-wds",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "'euFausto'",
   "license": "ISC",
   "keywords": [],
-  "description": ""
+  "description": "is the string WDS?",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faustolage77/vscode/commit/08ef19e41d0cb3f3a274c92a25a6fe3ca21eebae"
+  }
 }
