@@ -109,18 +109,26 @@ Now store a fahrenheit temperature into a variable.
 Convert it to celsius and output "NN°F is NN°C."
 */
 
-function celsiusToFahrenheit(c){
+// function celsiusToFahrenheit(c){
 
-    let convertToFarenheit = (c * 1.8) + 32;
-    console.log(`A temperatura em Farenheit e ${convertToFarenheit}`);
-}
+//     let convertToFarenheit = (c * 1.8) + 32;
+//     console.log(`A temperatura em Farenheit e ${convertToFarenheit}`);
+// }
 
-celsiusToFahrenheit(30);
+// celsiusToFahrenheit(30);
 
-function FarenheiToCelsius(f){
-    let convertToCelsius = ((f - 32)*5)/9;
-        console.log(`A temperatura em Celsius e ${convertToCelsius}`);
-}
+// function FarenheiToCelsius(f){
+//     let convertToCelsius = ((f - 32)*5)/9;
+//         console.log(`A temperatura em Celsius e ${convertToCelsius}`);
+// }
 
 
-celsiusToFahrenheit(12);
+// celsiusToFahrenheit(12);
+
+// lista de exercicios https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php
+
+/* 1. Write a JavaScript function that reverse a number. Go to the editor
+Example x = 32243;
+Expected Output : 34223
+*/
+
